@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIREBURG — Premium Fast Food & Onlayn Buyurtma</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =================================================================
+         1. STICKY NAVBAR
+         ================================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-icon"><i class="bi bi-fire"></i></span>
+                FIRE<span>BURG</span>
+            </a>
+
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Cart Button -->
+                <button class="cart-btn-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="Savatcha">
+                    <i class="bi bi-bag-fill"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </button>
+
+                <!-- Order CTA Button -->
+                <a href="checkout.html" class="btn btn-fire d-none d-sm-inline-flex py-2 px-3">
+                    <i class="bi bi-lightning-charge-fill"></i> Buyurtma berish
+                </a>
+
+                <!-- Mobile Hamburger -->
+                <button class="navbar-toggler border-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse order-lg-2" id="mainNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Bosh sahifa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menyu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Biz haqimizda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#promotions">Aksiyalar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Aloqa</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =================================================================
+         2. HERO SECTION
+         ================================================================= -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-badge">
+                        <i class="bi bi-lightning-fill"></i> 30 DAQIQADA ISSIQ YETKAZIB BERISH
+                    </div>
+                    <h1 class="hero-title">
+                        HAQIQIY OLOVLI <span>BURGER TA'MI!</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        100% halol barra mol go'shti, yangi yopilgan briosh bulochkalar va maxsus firmenniy souslar uyg'unligi. Hoziroq buyurtma bering va issiq holda qabul qiling!
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#menu-section" class="btn btn-fire btn-lg">
+                            <i class="bi bi-bag-check-fill"></i> Buyurtma berish
+                        </a>
+                        <a href="menu.html" class="btn btn-yellow btn-lg">
+                            <i class="bi bi-grid-fill"></i> Menyuni ko‘rish
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat-item">
+                            <h4>30 daq</h4>
+                            <p>O'rtacha yetkazish</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4>4.9 ★</h4>
+                            <p>Mijozlar bahosi</p>
+                        </div>
+                        <div class="hero-stat-item">
+                            <h4>100%</h4>
+                            <p>Halol va barra</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-image-wrapper">
+                        <div class="floating-tag tag-1">
+                            <i class="bi bi-fire text-danger fs-3"></i>
+                            <div class="text-start">
+                                <div class="fw-bold small">Double Smash</div>
+                                <div class="text-muted" style="font-size: 0.75rem;">Eng ko'p sotilgan</div>
+                            </div>
+                        </div>
+
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" 
+                             alt="Premium Double Burger" class="hero-burger-img">
+
+                        <div class="floating-tag tag-2">
+                            <i class="bi bi-percent text-dark fs-4"></i>
+                            <div class="text-start">
+                                <div class="fw-bold small">Promo: FIRE20</div>
+                                <div class="text-dark" style="font-size: 0.75rem;">20% chegirma oling</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         3. MENYU SECTION (CATEGORY FILTERING)
+         ================================================================= -->
+    <section id="menu-section" class="py-5 my-4">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="section-badge">Bizning Menyu</span>
+                <h2 class="section-title">ISHTAHANI OCHUVCHI <span>TAOMLAR</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Kategoriyani tanlang va sevimli fast food mahsulotingizni bir klikda savatchaga qo'shing.
+                </p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div id="homeCategoryTabs" class="category-tabs reveal"></div>
+
+            <!-- Products Grid -->
+            <div id="homeProductsGrid" class="row g-4"></div>
+
+            <div class="text-center mt-5">
+                <a href="menu.html" class="btn btn-outline-dark-custom btn-lg">
+                    Barcha menyuni ko‘rish <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         4. AKSIYALAR (PROMOTIONS) SECTION
+         ================================================================= -->
+    <section id="promotions" class="promo-section">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="section-badge bg-warning text-dark">Qaynoq Takliflar</span>
+                <h2 class="section-title text-white">MAXSUS <span>AKSIYALAR</span></h2>
+                <p class="text-white-50 mx-auto" style="max-width: 580px;">
+                    Buyurtma berishda promo kodlardan foydalaning va sevimli taomlaringizni yanada arzon narxda qo'lga kiriting!
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Promo 1 -->
+                <div class="col-md-4 reveal">
+                    <div class="promo-card red-promo">
+                        <div>
+                            <span class="badge bg-white text-danger fw-bold mb-3">SUPER CHEGIRMA</span>
+                            <h3 class="h2 fw-bold mb-2">Barcha buyurtmalarga 20% chegirma</h3>
+                            <p class="text-white-50 mb-4">
+                                Checkout sahifasida maxsus promo kodni kiriting va umumiy summadan 20% tejang.
+                            </p>
+                            <div class="promo-code-box">KOD: FIRE20</div>
+                        </div>
+                        <a href="menu.html" class="btn btn-light fw-bold rounded-pill py-2">
+                            Buyurtma berish <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="col-md-4 reveal">
+                    <div class="promo-card yellow-promo">
+                        <div>
+                            <span class="badge bg-dark text-warning fw-bold mb-3">2 + 1 AKSIYA</span>
+                            <h3 class="h2 fw-bold mb-2">2 ta Burger olsangiz, Coca-Cola bepul!</h3>
+                            <p class="mb-4" style="opacity: 0.85;">
+                                Istalgan 2 ta burger buyurtma qiling va muzdek ichimlikni sovg'a sifatida oling.
+                            </p>
+                            <div class="promo-code-box">KOD: BURGER15</div>
+                        </div>
+                        <a href="menu.html?cat=burgerlar" class="btn btn-dark fw-bold rounded-pill py-2">
+                            Burgerlarni tanlash <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Promo 3 -->
+                <div class="col-md-4 reveal">
+                    <div class="promo-card dark-promo">
+                        <div>
+                            <span class="badge bg-danger text-white fw-bold mb-3">COMBO SETLAR</span>
+                            <h3 class="h2 fw-bold mb-2">Do'stlar Seti — 25 000 so'm chegirma!</h3>
+                            <p class="text-white-50 mb-4">
+                                Oilaviy yoki do'stlar davrasi uchun mo'ljallangan katta combo setlarga maxsus taklif.
+                            </p>
+                            <div class="promo-code-box text-warning">KOD: YANGI25</div>
+                        </div>
+                        <a href="menu.html?cat=combo" class="btn btn-fire rounded-pill py-2">
+                            Setlarni ko‘rish <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         5. BIZ HAQIMIZDA (ABOUT US) SECTION
+         ================================================================= -->
+    <section id="about" class="py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <div class="row g-3 about-img-grid">
+                        <div class="col-6">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Fireburg Kitchen" class="img-fluid w-100" style="height: 320px; object-fit: cover;">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Fresh Ingredients" class="img-fluid w-100" style="height: 320px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal">
+                    <span class="section-badge">Biz haqimizda</span>
+                    <h2 class="section-title">NEGA AYNAN <span>FIREBURG?</span></h2>
+                    <p class="text-muted mb-4">
+                        2019-yildan beri biz mijozlarimizga nafaqat tezkor, balki restoran darajasidagi sifatli va mazali fast food taomlarini taqdim etib kelmoqdamiz. Har bir burger va lavash buyurtma tushgan zahoti tayyorlanadi.
+                    </p>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <div class="feature-icon"><i class="bi bi-award-fill"></i></div>
+                                <h5 class="fw-bold">100% Barra Mahsulotlar</h5>
+                                <p class="text-muted small mb-0">Har kuni yangi yetkazib beriladigan halol go'sht va sabzavotlar.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <div class="feature-icon"><i class="bi bi-bicycle"></i></div>
+                                <h5 class="fw-bold">Tezkor Yetkazish</h5>
+                                <p class="text-muted small mb-0">Maxsus termo-sumkalarda 30 daqiqa ichida issiq holda yetkazamiz.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-4 pt-2">
+                        <div>
+                            <h3 class="fw-bold text-danger mb-0">50,000+</h3>
+                            <small class="text-muted fw-semibold">Mamnun mijozlar</small>
+                        </div>
+                        <div class="vr"></div>
+                        <div>
+                            <h3 class="fw-bold text-danger mb-0">12 ta</h3>
+                            <small class="text-muted fw-semibold">Toshkent bo'ylab filiallar</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         6. MIJOZLAR FIKRI (TESTIMONIALS CAROUSEL)
+         ================================================================= -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="section-badge">Sharhlar</span>
+                <h2 class="section-title">MIJOZLARIMIZ <span>FIKRI</span></h2>
+            </div>
+
+            <div id="reviewsCarousel" class="carousel slide reveal" data-bs-ride="carousel">
+                <div class="carousel-inner pb-4">
+                    <!-- Review 1 -->
+                    <div class="carousel-item active">
+                        <div class="review-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" 
+                                 alt="Azizbek Karimov" class="review-avatar">
+                            <h5 class="fw-bold mb-1">Azizbek Karimov</h5>
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="text-muted fst-italic mb-0">
+                                "Fireburg Double Smash burgeri Toshkentdagi eng mazali burgerlardan biri! Yetkazib berish xizmati ham juda tez, 25 daqiqada issiq holda yetib keldi."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="carousel-item">
+                        <div class="review-card">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" 
+                                 alt="Madina Usmonova" class="review-avatar">
+                            <h5 class="fw-bold mb-1">Madina Usmonova</h5>
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="text-muted fst-italic mb-0">
+                                "Tandir mol go'shtli lavashi va rezavorli moxitosi juda yoqdi. Sayt orqali buyurtma berish juda oson va qulay ekan, promo kod ham ishladi!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="carousel-item">
+                        <div class="review-card">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" 
+                                 alt="Sardor Toshmatov" class="review-avatar">
+                            <h5 class="fw-bold mb-1">Sardor Toshmatov</h5>
+                            <div class="text-warning mb-3">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <p class="text-muted fst-italic mb-0">
+                                "Do'stlar bilan futbol ko'rishga Do'stlar Setini buyurtma qildik. Hammasi sersuv, fri qarsildoq, narxi esa hamyonbop. Tavsiya qilaman!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="bg-dark rounded-circle p-3 d-inline-flex"><i class="bi bi-chevron-left text-white"></i></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="bg-dark rounded-circle p-3 d-inline-flex"><i class="bi bi-chevron-right text-white"></i></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         7. ALOQA & GOOGLE MAPS SECTION
+         ================================================================= -->
+    <section id="contact" class="py-5 my-4">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="section-badge">Bog'lanish</span>
+                <h2 class="section-title">BIZ BILAN <span>ALOQA</span></h2>
+            </div>
+
+            <div class="row g-4 reveal">
+                <div class="col-lg-5">
+                    <div class="contact-info-card d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold mb-4">Aloqa ma'lumotlari</h4>
+
+                            <div class="d-flex align-items-start gap-3 mb-4">
+                                <div class="feature-icon mb-0 flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
+                                <div>
+                                    <div class="text-muted small">Call-markaz (24/7)</div>
+                                    <a href="tel:+998712000000" class="fw-bold text-dark text-decoration-none fs-5">+998 (71) 200-00-00</a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start gap-3 mb-4">
+                                <div class="feature-icon mb-0 flex-shrink-0"><i class="bi bi-geo-alt-fill"></i></div>
+                                <div>
+                                    <div class="text-muted small">Bosh filial manzili</div>
+                                    <div class="fw-bold text-dark">Toshkent sh., Amir Temur shoh ko'chasi, 45-uy</div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start gap-3 mb-4">
+                                <div class="feature-icon mb-0 flex-shrink-0"><i class="bi bi-clock-fill"></i></div>
+                                <div>
+                                    <div class="text-muted small">Ish vaqti</div>
+                                    <div class="fw-bold text-dark">Har kuni: 09:00 — 03:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 border-top">
+                            <div class="fw-bold small mb-2">Ijtimoiy tarmoqlarimiz:</div>
+                            <div class="d-flex gap-2">
+                                <a href="https://t.me" target="_blank" class="btn btn-outline-primary rounded-pill fw-semibold">
+                                    <i class="bi bi-telegram"></i> Telegram
+                                </a>
+                                <a href="https://instagram.com" target="_blank" class="btn btn-outline-danger rounded-pill fw-semibold">
+                                    <i class="bi bi-instagram"></i> Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.254362709873!2d69.27973731542388!3d41.31108197927116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b2931f41f23%3A0x81095e06b654b845!2sAmir%20Temur%20Square!5e0!3m2!1sen!2suz!4v1700000000000!5m2!1sen!2suz" 
+                            width="100%" height="100%" style="border:0; min-height: 360px;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         8. FOOTER
+         ================================================================= -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4 pb-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand mb-3" href="index.html">
+                        <span class="brand-icon"><i class="bi bi-fire"></i></span>
+                        FIRE<span>BURG</span>
+                    </a>
+                    <p class="small mb-4">
+                        Zamonaviy fast food madaniyati. Eng sara masalliqlar, tezkor yetkazib berish va unutilmas ta'm uyg'unligi.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-circle"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-circle"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-circle"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-2">
+                    <h5 class="footer-title">Sahifalar</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Bosh sahifa</a></li>
+                        <li><a href="menu.html">To'liq menyu</a></li>
+                        <li><a href="#about">Biz haqimizda</a></li>
+                        <li><a href="#promotions">Aksiyalar</a></li>
+                        <li><a href="checkout.html">Buyurtma berish</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h5 class="footer-title">Kategoriyalar</h5>
+                    <ul class="footer-links">
+                        <li><a href="menu.html?cat=burgerlar">Burgerlar</a></li>
+                        <li><a href="menu.html?cat=lavashlar">Lavashlar</a></li>
+                        <li><a href="menu.html?cat=hotdoglar">Hot-doglar</a></li>
+                        <li><a href="menu.html?cat=pitsa">Pitsa</a></li>
+                        <li><a href="menu.html?cat=combo">Combo va setlar</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3">
+                    <h5 class="footer-title">Tezkor Buyurtma</h5>
+                    <p class="small mb-2">Har kuni 09:00 dan 03:00 gacha xizmatingizdamiz:</p>
+                    <div class="fs-4 fw-bold text-warning mb-3">+998 (71) 200-00-00</div>
+                    <a href="menu.html" class="btn btn-fire btn-sm">Menyuni ochish</a>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-4 text-center small">
+                &copy; 2026 FIREBURG Fast Food Restaurant. Barcha huquqlar himoyalangan.
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         OFFCANVAS SHOPPING CART DRAWER
+         ================================================================= -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header bg-dark text-white">
+            <h5 class="offcanvas-title fw-bold d-flex align-items-center gap-2" id="cartOffcanvasLabel">
+                <i class="bi bi-bag-heart-fill text-warning"></i> Sizning savatchangiz
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Yopish"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Empty State -->
+            <div id="cartEmptyState" class="text-center my-auto py-5">
+                <i class="bi bi-cart-x text-muted" style="font-size: 4rem;"></i>
+                <h5 class="fw-bold mt-3">Savatchangiz hozircha bo'sh</h5>
+                <p class="text-muted small mb-4">Mazali burger va lavashlardan tanlab savatchaga qo'shing!</p>
+                <button type="button" class="btn btn-fire" data-bs-dismiss="offcanvas">Menyuga qaytish</button>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cartItemsContainer" class="flex-grow-1 overflow-auto pe-1"></div>
+
+            <!-- Cart Footer -->
+            <div id="cartDrawerFooter" class="pt-3 border-top mt-3 d-none">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted fw-semibold">Jami summa:</span>
+                    <span id="cartSubtotal" class="fs-4 fw-bold text-dark">0 so'm</span>
+                </div>
+                <a href="checkout.html" class="btn btn-fire w-100 py-3">
+                    Buyurtmani rasmiylashtirish <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Project Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
